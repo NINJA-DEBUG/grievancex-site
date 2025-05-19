@@ -18,9 +18,12 @@
     .btn:hover { background: #0056b3; }
     .form-container { background: #fff; border-radius: 10px; padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
     form label { display: block; margin-top: 1rem; font-weight: bold; }
-    form input, form textarea { width: 100%; padding: 0.75rem; margin-top: 0.5rem; border: 1px solid #ccc; border-radius: 5px; }
+    form input, form textarea, form select { width: 100%; padding: 0.75rem; margin-top: 0.5rem; border: 1px solid #ccc; border-radius: 5px; }
     form button { margin-top: 1.5rem; padding: 0.75rem 1.5rem; background: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
     form button:hover { background: #218838; }
+    .template-box { background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); margin-top: 2rem; }
+    .template-box h3 { margin-top: 0; color: #333; }
+    .template-box pre { background: #f0f0f0; padding: 1rem; border-radius: 5px; overflow-x: auto; font-size: 0.9rem; }
     footer { text-align: center; padding: 1rem; background: #fff; border-top: 1px solid #ddd; margin-top: 3rem; color: #777; font-size: 0.9rem; }
   </style>
 </head>
@@ -33,16 +36,20 @@
   <div class="container">
     <div class="card">
       <h2>🚧 Pothole Reporting</h2>
-      <p>Help fix roads faster by reporting dangerous potholes. Enter the location, add a photo, and send your complaint to the right department instantly.</p>
+      <p>Help fix roads faster by reporting dangerous potholes. Email complaints to <strong>potholes@ahmedabadcity.gov.in</strong> or call <strong>+91-79-27556182</strong>.</p>
+      <a href="mailto:potholes@ahmedabadcity.gov.in?subject=Pothole Complaint&body=Location:%20%0AIssue:%20There%20is%20a%20dangerous%20pothole%20at%20the%20above%20location.%0APhoto%20(if%20any):%20%0ARegards,%20Citizen" class="btn">Report Pothole</a>
     </div>
     <div class="card">
       <h2>🗑️ Garbage Complaints</h2>
-      <p>Unattended garbage piles? Use GrievanceX to notify sanitation teams with details and proof to clean up your area quickly.</p>
+      <p>Notify sanitation teams by emailing <strong>swm@ahmedabadcity.gov.in</strong> or calling <strong>+91-79-27556183</strong>.</p>
+      <a href="mailto:swm@ahmedabadcity.gov.in?subject=Garbage Complaint&body=Location:%20%0AIssue:%20Unattended%20garbage%20is%20piling%20up%20and%20needs%20urgent%20cleaning.%0APhoto%20(if%20any):%20%0ARegards,%20Citizen" class="btn">Report Garbage</a>
     </div>
     <div class="card">
       <h2>💡 Streetlight Issues</h2>
-      <p>Dark streets are unsafe. If a streetlight isn't working, submit a report with the exact location and photo proof to speed up repairs.</p>
+      <p>Send complaints to <strong>streetlights@ahmedabadcity.gov.in</strong> or call <strong>+91-79-27556184</strong>.</p>
+      <a href="mailto:streetlights@ahmedabadcity.gov.in?subject=Streetlight Complaint&body=Location:%20%0AIssue:%20Streetlight%20is%20not%20working%20at%20the%20above%20location.%0APhoto%20(if%20any):%20%0ARegards,%20Citizen" class="btn">Report Streetlight</a>
     </div>
+
     <div class="form-container">
       <h2>📬 Submit a Complaint</h2>
       <form name="grievanceForm" method="POST" data-netlify="true">
@@ -64,6 +71,27 @@
 
         <button type="submit">Submit Complaint</button>
       </form>
+    </div>
+
+    <div class="template-box">
+      <h3>📋 Copy-Paste Complaint Template</h3>
+      <pre>
+To: [Concerned Authority Email]
+Subject: Civic Issue Complaint - [Category]
+
+Respected Sir/Madam,
+
+I would like to bring to your attention the following issue:
+
+Location: [Insert Location Here]
+Issue: [Briefly describe the problem, e.g., pothole, garbage dump, broken streetlight]
+Photo Link (if available): [Insert URL]
+
+Kindly look into this matter at the earliest.
+
+Thank you,
+Citizen
+      </pre>
     </div>
   </div>
 
